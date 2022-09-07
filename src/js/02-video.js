@@ -15,3 +15,5 @@ function savePlayedTime() {
 videoPlayer.setCurrentTime(
   localStorage.getItem('videoplayer-current-time') || 0
 );
+
+console.log(localStorage);
