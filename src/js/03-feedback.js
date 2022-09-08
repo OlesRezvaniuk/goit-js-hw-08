@@ -43,3 +43,5 @@ function populateForm() {
 if (localStorage.getItem(STORAGE_KEY)) {
   populateForm();
 }
+
+console.log(localStorage);
