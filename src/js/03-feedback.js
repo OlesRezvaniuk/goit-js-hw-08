@@ -12,20 +12,20 @@ refs.formEl.addEventListener('submit', submit);
 const LOCAL_STORAGE = 'feedback-form-state';
 
 checkDataOnRestart();
-// Функція виклику локального сховища
+// Виклик локального сховища
 function saveLocalStorageData(event) {
   const email = this.email.value;
   const message = this.message.value;
   localStorage.setItem(LOCAL_STORAGE, JSON.stringify({ email, message }));
 }
-// Функція відправлення та очистки форми
+// Відправлення та очистки форми
 function submit(el) {
   el.preventDefault();
   console.log(localStorage.getItem(LOCAL_STORAGE));
   localStorage.removeItem(LOCAL_STORAGE);
   el.currentTarget.reset();
 }
-
+// Заповненні форми при рестарті
 const emptyInput = {};
 refs.formEl.addEventListener('input', e => {
   emptyInput[e.target.name] = e.target.value;
