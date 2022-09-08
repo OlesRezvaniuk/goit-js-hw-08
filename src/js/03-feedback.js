@@ -30,7 +30,7 @@ const emptyInput = {};
 refs.formEl.addEventListener('input', e => {
   emptyInput[e.target.name] = e.target.value;
 });
-
+// Якщо сховище не пусте то передаємо дані в інпути при рестарті
 function checkDataOnRestart() {
   if (!localStorage.getItem(LOCAL_STORAGE)) {
     return;

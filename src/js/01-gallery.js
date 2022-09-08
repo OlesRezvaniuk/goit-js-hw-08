@@ -14,7 +14,8 @@ const listItemsMarkup = createListItemsMarkup(galleryItems);
 function createListItemsMarkup(galleryItems) {
   return (
     galleryItems
-      //   метод .map() з параметрами, створюємо html контент за допомогою шаблонних рядків, вказуємо перемінні в src, data-source і alt
+      //   метод .map() з параметрами, створюємо html контент за допомогою
+      //  шаблонних рядків, вказуємо перемінні в src, data - source і alt
       .map(({ preview, original, description }) => {
         return `
       <div class="gallery__item">
